@@ -1,0 +1,16 @@
+model:
+  id: Qwen/Qwen2.5-0.5B-Instruct
+  target_id: Qwen/Qwen3-4B
+  revision: main
+  license: Apache-2.0
+  context_length: 32768
+  local_dir: ai/models/base
+  embedding_model: sentence-transformers/all-MiniLM-L6-v2
+  embedding_local_dir: models/embeddings
+service:
+  host: 127.0.0.1
+  port: 8001
+generation:
+  max_new_tokens: 512
+  temperature: 0.7
+  top_p: 0.9

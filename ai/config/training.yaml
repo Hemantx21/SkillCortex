@@ -1,0 +1,16 @@
+training:
+  base_model: Qwen/Qwen3-4B
+  method: lora
+  use_qlora: false
+  output_dir: models/adapters/aj
+  epochs: 1
+  learning_rate: 0.0002
+  batch_size: 1
+  gradient_accumulation_steps: 8
+  max_seq_length: 1024
+  lora_r: 8
+  lora_alpha: 16
+  lora_dropout: 0.05
+  seed: 42
+  eval_split: 0.1
+  test_split: 0.1
